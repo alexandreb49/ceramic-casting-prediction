@@ -1,0 +1,8 @@
+{
+
+"MIN_HEIGHT" : 0,
+"MAX_HEIGHT" : 1000,
+"IMAGE_RESOLUTION" : 1000,
+"COLOR_MAP" : { "blue" : 0, "green" : 0.5, "orange" : 0.8, "red" : 1.0 }
+
+}

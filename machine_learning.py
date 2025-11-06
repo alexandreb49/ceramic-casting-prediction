@@ -45,3 +45,46 @@
 #     optimizer=optimizer,
 #     metrics=['accuracy']
 # )
+
+
+
+import tensorflow as tf
+import keras 
+import keras.layers as layers
+
+
+
+particles_layers = []
+
+# input= 
+# output = 
+
+particles_model = keras.Sequential(particles_layers)
+
+
+
+INPUT_SHAPE = (64,64,64,1)
+
+main_model = keras.Sequential([
+    layers.Conv3D(64, (3,3,3), activation='relu', padding='same', input_shape=INPUT_SHAPE),
+    layers.AvgPool3D((2,2,2)),
+
+    layers.Conv3D(128, (3,3,3), activation='relu', padding='same'),
+    layers.AvgPool3D((2,2,2)),
+
+    layers.Conv3D(64, (3,3,3), activation='relu', padding='same'),
+    
+    # --- dernière couche convolutionnelle qui produit une matrice 3D ---
+    layers.Conv3D(1, (1,1,1), activation='relu', padding='same')  
+])
+
+
+
+
+
+
+
+
+
+
+
